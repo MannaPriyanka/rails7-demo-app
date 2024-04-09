@@ -1,3 +1,19 @@
 <strong> <%= @article.title %> </strong>
 <p> <%= @article.content %> </p>
 <%=link_to "HomePage", root_path%>
+
+<h2> New Comment </h2>
+<%= form_with model: [ @article, @article.comments.build ] do |f| %>
+  <%=f.text_area :body %>
+  <%=f.submit :submit %>
+<% end %>
+
+
+<h2> Comments </h2>
+<ul>
+  <% @article.comments.each do |comment| %>
+    <li>
+      <%=comment.body%>
+    </li>
+  <% end %>
+</ul>

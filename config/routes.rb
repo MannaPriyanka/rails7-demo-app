@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # get "/articles/:id", to: "articles#show" ,as: :article
   # delete "/articles/:id", to: "articles#destroy"
 
-  resources :articles
-
+  resources :articles do
+    resources :comments
+  end
 end
