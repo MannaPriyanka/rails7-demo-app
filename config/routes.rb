@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Defines the root path route ("/")
-  root "articles#index"
+  root "home#index"
 
   # get "/articles", to: "articles#index"
   # get "/article/new", to: "articles#new"
@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  resources :rooms
 end

@@ -1,0 +1,25 @@
+<% if notice %>
+  <p class="notice">
+    <%=notice %>
+  </p>
+<% end %>
+<% if alert %>
+  <p class="alert">
+    <%=alert %>
+  </p>
+<% end %>
+
+<h1>Rooms</h1>
+<ul>
+  <% @rooms.each do |room| %>
+    <li>
+      <strong><%=room.name%></strong>
+      <p><%=room.capacity%></p>
+      <%=link_to "Show", room%>
+      <%=link_to "Edit", edit_room_path(room.id)%>
+      <%=button_to "Delete", room_path(room.id), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<%=link_to "Create New Room", new_room_path %>
