@@ -1,0 +1,13 @@
+<h1>Notes</h1>
+<ol>
+  <% @notes.each do |note| %>
+    <li>
+      <%=render 'note', note: note%>
+      <%=link_to "Show", note%>
+      <%=link_to "Edit", edit_note_path(note.id)%>
+      <%=button_to "Delete", note_path(note.id), method: :delete %>
+    </li>
+  <% end %>
+</ol>
+
+<%=link_to "Create New Note", new_note_path %>
