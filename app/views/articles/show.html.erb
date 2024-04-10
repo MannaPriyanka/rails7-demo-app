@@ -1,5 +1,6 @@
 <strong> <%= @article.title %> </strong>
 <p> <%= @article.content %> </p>
+<%=link_to "Articles Page", articles_path%>
 <%=link_to "HomePage", root_path%>
 
 <%= render "comments/form"%>
