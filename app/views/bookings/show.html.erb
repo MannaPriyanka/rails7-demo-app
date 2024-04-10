@@ -1,0 +1,7 @@
+<strong><%=@booking.purpose%></strong>
+<p> <%=link_to @booking.room.name, room_path(@booking.room_id) %></p>
+<p><%=@booking.start%></p>
+<p><%=@booking.end%></p>
+
+<%=link_to "Bookings Page", bookings_path %>
+<%=link_to "Home Page", root_path %>

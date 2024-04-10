@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2024-04-10 11:40:44
+  end: 2024-04-10 11:40:44
+  room_id: 1
+  purpose: MyText
+
+two:
+  start: 2024-04-10 11:40:44
+  end: 2024-04-10 11:40:44
+  room_id: 1
+  purpose: MyText

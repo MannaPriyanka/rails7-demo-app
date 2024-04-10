@@ -1,0 +1,15 @@
+<%=form_with model: booking do |f|%>
+  <%= f.label :purpose%>
+  <%= f.text_area :purpose%>
+
+  <%= f.label :startdate%>
+  <%= f.datetime_field :start%>
+
+  <%= f.label :enddate%>
+  <%= f.datetime_field :end%>
+
+  <%= f.label :room%>
+  <%= f.collection_select :room_id, Room.all,  :id, :name %>
+
+  <%= f.submit %>
+<%end%>

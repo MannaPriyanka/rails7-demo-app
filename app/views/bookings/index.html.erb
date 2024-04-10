@@ -1,0 +1,16 @@
+<h1>Bookings</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      <strong><%=booking.purpose%></strong>
+      <p> <%=link_to booking.room.name, room_path(booking.room_id) %></p>
+      <p><%=booking.start%></p>
+      <p><%=booking.end%></p>
+      <%=link_to "Show", booking%>
+      <%=link_to "Edit", edit_booking_path(booking.id)%>
+      <%=button_to "Delete", booking_path(booking.id), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<%=link_to "Create New Booking", new_booking_path %>

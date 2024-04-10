@@ -1,4 +1,16 @@
 <strong> <%=@room.name %> </strong>
 <p> <%=@room.capacity %> </p>
+
+<ul>
+  <% @room.bookings.each do |booking| %>
+    <li>
+      <strong><%=booking.purpose%></strong>
+      <p> <%=link_to booking.room.name, room_path(booking.room_id) %></p>
+      <p><%=booking.start%></p>
+      <p><%=booking.end%></p>
+    </li>
+  <% end %>
+</ul>
+
 <%=link_to "Rooms Page", rooms_path%>
 <%=link_to "HomePage", root_path%>
